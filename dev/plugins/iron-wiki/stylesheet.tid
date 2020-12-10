@@ -4,6 +4,24 @@ tags: $:/tags/Stylesheet
 .iw-body {
     position: relative;
     width: 100%;
-    max-width: 950px;
+    max-width: 1150px;
     margin: auto;
+}
+
+.iw-controls {
+    float: right;
+}
+
+.iw-left-panel {
+    width: 300px;
+    background: red;
+}
+
+.iw-story {
+    background: blue;
+}
+
+.iw-title {
+    padding: 5px;
+    box-sizing: border-box;
 }

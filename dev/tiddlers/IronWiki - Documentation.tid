@@ -1,0 +1,27 @@
+created: 20201210210246447
+modified: 20201210213618324
+tags: 
+title: IronWiki - Documentation
+type: text/vnd.tiddlywiki
+
+! What is ~IronWiki
+
+~IronWiki is a plugin for [[TiddlyWiki|https://tiddlywiki.com]]. It modify all the interface and change it for a
+
+TODO
+
+! Usage
+
+!! Switching between interface
+
+TODO
+
+! Download
+
+TODO
+
+! Credits
+
+I will never thank enough  [[Ironsworn|https://ironswornrpg.com]] and its creator for the fun it gave me. Default content come from official and freely available documents you can download on the official website.
+
+The design and a lot of concepts in this plugin come from [[IronWriter|https://alexlarioza.com/IronWriter/]], a great app to play Ironsworn solo.

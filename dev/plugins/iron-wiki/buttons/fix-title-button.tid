@@ -1,0 +1,9 @@
+title: $:/plugins/othy/iron-wiki/buttons/fix-title
+
+\whitespace trim
+<$button class=<<tv-config-toolbar-class>>
+set="$:/state/othy/iron-wiki/iw-edit-title"
+setTo="no"
+tooltip="Stop editing title">
+{{$:/core/images/cancel-button}}
+</$button>

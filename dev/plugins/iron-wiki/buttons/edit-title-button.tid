@@ -3,6 +3,8 @@ tags: $:/tags/iron-wiki/title-buttons
 
 \whitespace trim
 <$button class=<<tv-config-toolbar-class>>
+set="$:/state/othy/iron-wiki/iw-edit-title"
+setTo="yes"
 tooltip="Edit title">
 {{$:/core/images/edit-button}}
 </$button>

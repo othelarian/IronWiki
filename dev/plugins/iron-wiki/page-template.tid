@@ -41,30 +41,36 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 
 <div class="iw-body">
 
-<div class="tc-tiddler-title">
+<div class="tc-tiddler-title iw-title">
 <div class="tc-titlebar">
-
-<span class="tc-tiddler-controls">
-
+<span class="tc-tiddler-controls iw-controls">
 <$set name="tv-config-toolbar-class" filter="[<tv-config-toolbar-class>]">
-{{$:/plugins/othy/iron-wiki/buttons/edit-title}} 
+<$reveal type="match" text="no" state="$:/state/othy/iron-wiki/iw-edit-title" default="no">
+{{$:/plugins/othy/iron-wiki/buttons/edit-title}}
+</$reveal>
+<$reveal type="match" text="yes" state="$:/state/othy/iron-wiki/iw-edit-title" default="no">
+{{$:/plugins/othy/iron-wiki/buttons/fix-title}}
+</$reveal>
 {{$:/plugins/othy/iron-wiki/buttons/switch-back}}
 </$set>
-
 </span>
-
+<$reveal type="match" text="no" state="$:/state/othy/iron-wiki/iw-edit-title" default="no">
 <h2 class="tc-title"><$transclude tiddler="$:/SiteTitle" mode="inline"/></h2>
-
+</$reveal>
+<$reveal type="match" text="yes" state="$:/state/othy/iron-wiki/iw-edit-title" default="no">
+<$edit-text tiddler="$:/SiteTitle" tag="input" />
+</$reveal>
 </div>
 </div>
+<$scrollable class="iw-left-panel">
+left panel
+</$scrollable>
+<$scrollable class="iw-story">
+story
+</$scrollable>
 
-TODO : title
 
-TODO : switch
-
-<$button set="$:/plugins/othy/iron-wiki/settings/iw-active" setTo="no">
-go back to classic
-</$button>
+TODO : form section
 
 </div>
 
