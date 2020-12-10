@@ -1,0 +1,93 @@
+title: $:/core/ui/PageTemplate
+
+\whitespace trim
+\define containerClasses()
+tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
+\end
+\import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+
+
+<$set name="tv-config-toolbar-icons" value={{$:/config/Toolbar/Icons}}>
+
+<$set name="tv-config-toolbar-text" value={{$:/config/Toolbar/Text}}>
+
+<$set name="tv-config-toolbar-class" value={{$:/config/Toolbar/ButtonClass}}>
+
+<$set name="tv-enable-drag-and-drop" value={{$:/config/DragAndDrop/Enable}}>
+
+<$set name="tv-show-missing-links" value={{$:/config/MissingLinks}}>
+
+<$set name="storyviewTitle" value={{$:/view}}>
+
+<$set name="languageTitle" value={{{ [{$:/language}get[name]] }}}>
+
+<div class=<<containerClasses>>>
+
+<$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
+
+<$dropzone enable=<<tv-enable-drag-and-drop>>>
+
+
+<$reveal type="match" text="no" state="$:/plugins/othy/iron-wiki/settings/iw-active">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]" variable="listItem">
+
+<$transclude tiddler=<<listItem>>/>
+
+</$list>
+</$reveal>
+
+<$reveal type="match" text="yes" state="$:/plugins/othy/iron-wiki/settings/iw-active">
+
+<div class="iw-body">
+
+<div class="tc-tiddler-title">
+<div class="tc-titlebar">
+
+<span class="tc-tiddler-controls">
+
+<$set name="tv-config-toolbar-class" filter="[<tv-config-toolbar-class>]">
+{{$:/plugins/othy/iron-wiki/buttons/edit-title}} 
+{{$:/plugins/othy/iron-wiki/buttons/switch-back}}
+</$set>
+
+</span>
+
+<h2 class="tc-title"><$transclude tiddler="$:/SiteTitle" mode="inline"/></h2>
+
+</div>
+</div>
+
+TODO : title
+
+TODO : switch
+
+<$button set="$:/plugins/othy/iron-wiki/settings/iw-active" setTo="no">
+go back to classic
+</$button>
+
+</div>
+
+<$transclude tiddler="$:/core/ui/PageTemplate/alerts"/>
+
+</$reveal>
+
+</$dropzone>
+
+</$navigator>
+
+</div>
+
+</$set>
+
+</$set>
+
+</$set>
+
+</$set>
+
+</$set>
+
+</$set>
+
+</$set>

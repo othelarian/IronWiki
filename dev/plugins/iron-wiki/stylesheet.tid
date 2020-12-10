@@ -1,0 +1,9 @@
+title: $:/plugins/othy/iron-wiki/stylesheet
+tags: $:/tags/Stylesheet
+
+.iw-body {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}

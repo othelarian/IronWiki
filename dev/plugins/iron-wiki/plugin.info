@@ -5,5 +5,5 @@
   "author": "othelarian",
   "version": "0.1.0",
   "core-version": ">=5,1,22",
-  "plugin-type": éplugin"
+  "plugin-type": "plugin"
 }

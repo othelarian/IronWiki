@@ -1,0 +1,18 @@
+title: $:/plugins/othy/iron-wiki/iw-switch-button
+caption: ~IronWiki Switch
+tags: $:/tags/PageControls
+name: IronWiki Switch
+
+\whitespace trim
+<$button
+set="$:/plugins/othy/iron-wiki/settings/iw-active"
+setTo="yes"
+tooltip="Switch to IronWiki interface"
+aria-label={{!!caption}} class=<<tv-config-toolbar-class>>>
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/plugins/othy/iron-wiki/iw-image}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text"><$text text={{$:/plugins/othy/iron-wiki/iw-switch-button!!name}}/></span>
+</$list>
+</$button>

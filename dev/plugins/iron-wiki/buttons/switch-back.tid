@@ -1,0 +1,10 @@
+title: $:/plugins/othy/iron-wiki/buttons/switch-back
+tags: $:/tags/iron-wiki/title-buttons
+
+\whitespace trim
+<$button set="$:/plugins/othy/iron-wiki/settings/iw-active"
+setTo="no"
+class=<<tv-config-toolbar-class>>
+tooltip="Go back to classic TiddlyWiki">
+{{$:/core/icon}}
+</$button>

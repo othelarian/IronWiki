@@ -1,0 +1,8 @@
+title: $:/plugins/othy/iron-wiki/buttons/edit-title
+tags: $:/tags/iron-wiki/title-buttons
+
+\whitespace trim
+<$button class=<<tv-config-toolbar-class>>
+tooltip="Edit title">
+{{$:/core/images/edit-button}}
+</$button>
