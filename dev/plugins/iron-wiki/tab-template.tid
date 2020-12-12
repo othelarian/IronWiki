@@ -1,0 +1,7 @@
+title: $:/plugins/othy/iron-wiki/tab-template
+
+<$scrollable>
+<$tiddler tiddler=<<currentTab>>>
+<$transclude mode="block" />
+</$tiddler>
+</$scrollable>

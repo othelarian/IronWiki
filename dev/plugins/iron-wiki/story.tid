@@ -1,0 +1,28 @@
+title: $:/plugins/othy/iron-wiki/story
+caption: Story
+tags: $:/tags/othy/iron-wiki/bodytab
+
+<$scrollable class="iw-story-river iw-body-element">
+
+story river
+
+<$list filter="[range[30]]"> bla bla</$list>
+
+<$list filter="[range[30]]">
+
+blabla
+
+</$list>
+
+</$scrollable>
+<div class="tc-tiddler-frame iw-story-form iw-body-element">
+
+TODO : story form
+
+<$list filter="[range[30]]">
+
+blabla
+
+</$list>
+
+</div>

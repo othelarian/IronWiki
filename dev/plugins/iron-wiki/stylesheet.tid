@@ -8,20 +8,50 @@ tags: $:/tags/Stylesheet
     margin: auto;
 }
 
+.iw-body-element {
+    margin-left: 320px;
+}
+
+.iw-body-tab-btns {
+    margin-left: 320px;
+    height: 40px;
+    font-size: 1.1em;
+    text-align: right;
+    border-bottom: 1px solid <<colour-tab-divider>>;
+    position: sticky;
+    top: 75px;
+}
+
 .iw-controls {
     float: right;
 }
 
 .iw-left-panel {
     width: 300px;
-    background: red;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    top: 85px;
+    margin-bottom: 0;
 }
 
-.iw-story {
-    background: blue;
+.iw-story-form {
+    height: 200px;
+    padding: 10px;
+    width: initial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.iw-story-river {
+    height: calc(100vh - 350px);
+    margin-top: 10px;
 }
 
 .iw-title {
     padding: 5px;
     box-sizing: border-box;
+    height: 60px;
+    top: 15px;
 }
