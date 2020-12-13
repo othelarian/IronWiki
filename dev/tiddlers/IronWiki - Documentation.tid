@@ -1,27 +1,68 @@
 created: 20201210210246447
-modified: 20201210213618324
+modified: 20201213012807747
 tags: 
 title: IronWiki - Documentation
 type: text/vnd.tiddlywiki
 
+\define doc-paragraph(state)
+<$reveal type="match" state=<<__state__>> text="no" default="no">
+<$button set=<<__state__>> setTo="yes" class="tc-btn-invisible">{{$:/core/images/right-arrow}}</$button>
+</$reveal>
+<$reveal type="match" state=<<__state__>> text="yes" default="no">
+<$button set=<<__state__>> setTo="no" class="tc-btn-invisible">{{$:/core/images/down-arrow}}</$button>
+</$reveal>
+\end
+
+\define show-btn(button)
+<span style="font-size: 28px">
+<$transclude tiddler=<<__button__>>/>
+</span>
+\end
+
 ! What is ~IronWiki
 
-~IronWiki is a plugin for [[TiddlyWiki|https://tiddlywiki.com]]. It modify all the interface and change it for a
+~IronWiki is a plugin for [[TiddlyWiki|https://tiddlywiki.com]]. It modify all the interface and change it to offer a better way to handle an [[Ironsworn|https://ironswornrpg.com]] solo play.
 
-TODO
+!! First goal
+
+There is already a lot of great tools to play [[Ironsworn|https://ironswornrpg.com]], so why another way to do it? First, because I can, and it's always a good idea to have plenty of choices to do the same thing. Second, ~IronWiki took its inspiration from [[IronWriter|https://alexlarioza.com/IronWriter]], trying to have a similar interface, with the same concepts behind the history of events, but with [[TiddlyWiki|https://tiddlywiki.com]] as its core and going even a little bit further (or at least trying to do so).
+
+So the main goal behind v1 is to be as close as [[IronWriter|https://alexlarioza.com/IronWriter]] in term of functionalities. For the v2, ask the Oracle.
 
 ! Usage
 
-!! Switching between interface
+(Use arrows to reveal documentation)
 
-TODO
+!! <<doc-paragraph "$:/state/doc-switch-interface">> Switching between interface
 
-! Download
+<$reveal type="match" state="$:/state/doc-switch-interface" text="yes" default="no">
+The ~IronWiki plugin add a special button in the toolbar:
+<<show-btn "$:/plugins/othy/iron-wiki/iw-switch-button">>
+<br />
+And to come back to classic ~TiddlyWiki interface, this one:
+<<show-btn "$:/plugins/othy/iron-wiki/buttons/switch-back">>
+</$reveal>
 
-TODO
+!! <<doc-paragraph "$:/state/doc-change-title">> Change the title
+
+<$reveal type="match" state="$:/state/doc-change-title" text="yes" default="no">
+The title is easily editable by clicking on the button <<show-btn "$:/plugins/othy/iron-wiki/buttons/edit-title">> at the right of the title. Why this functionality? Do you know of to change the title of a ~TiddlyWiki?
+</$reveal>
+
+(More to come)
+
+! Download & use it
+
+You want to use the ~IronWiki plugin, it's easy, you can download this file, manually or with this button <<show-btn "$:/core/ui/Buttons/save-wiki">>, or you can drag'n'drop the box below on an empty ~TiddlyWiki file:
+
+<div style="margin-right:70px;margin-left:70px;">
+{{$:/plugins/othy/iron-wiki||$:/core/ui/Components/plugin-info}}
+</div>
+
+Easy, right?
 
 ! Credits
 
 I will never thank enough  [[Ironsworn|https://ironswornrpg.com]] and its creator for the fun it gave me. Default content come from official and freely available documents you can download on the official website.
 
-The design and a lot of concepts in this plugin come from [[IronWriter|https://alexlarioza.com/IronWriter/]], a great app to play Ironsworn solo.
+The design and a lot of concepts in this plugin come from [[IronWriter|https://alexlarioza.com/IronWriter]], a great app to play Ironsworn solo.
