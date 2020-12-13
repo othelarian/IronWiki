@@ -6,8 +6,6 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 \end
 \import [[$:/core/ui/PageMacros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 
-
-
 <$set name="tv-config-toolbar-icons" value={{$:/config/Toolbar/Icons}}>
 <$set name="tv-config-toolbar-text" value={{$:/config/Toolbar/Text}}>
 <$set name="tv-config-toolbar-class" value={{$:/config/Toolbar/ButtonClass}}>
@@ -50,14 +48,28 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 </div>
 </div>
 <$scrollable class="tc-tiddler-frame iw-left-panel">
-left panel
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/othy/iron-wiki/left-panel]]"
+variable="panel">
+<$set name="panel-state" filter="[<panel>get[state]]">
+<$set name="panel-default" filter="[<panel>get[defstate]]">
 
-<$list filter="[range[20]]">
+<$importvariables filter="[[$:/plugins/othy/iron-wiki/helpers/arrow-button]]">
 
-blabla
+!! <$transclude tiddler=<<panel>> field="caption"/> <span style="float:right;"><$macrocall $name="arrow-button" state=<<panel-state>> def=<<panel-default>>/></span>
 
+</$importvariables>
+
+<$reveal type="match" state=<<panel-state>> text="yes" default=<<panel-default>>>
+
+<$transclude tiddler=<<panel>> />
+
+</$reveal>
+
+---
+
+</$set>
+</$set>
 </$list>
-
 </$scrollable>
 <$set name="tab-filter" filter="[all[shadows+tiddlers]tag[$:/tags/othy/iron-wiki/bodytab]]">
 <$set name="tab-state" value="$:/state/othy/iron-wiki/bodytab">

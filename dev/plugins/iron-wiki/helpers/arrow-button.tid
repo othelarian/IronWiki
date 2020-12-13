@@ -1,0 +1,10 @@
+title: $:/plugins/othy/iron-wiki/helpers/arrow-button
+
+\define arrow-button(state, def:"no")
+<$reveal type="match" state=<<__state__>> text="no" default=<<__def__>>>
+<$button set=<<__state__>> setTo="yes" class="tc-btn-invisible">{{$:/core/images/right-arrow}}</$button>
+</$reveal>
+<$reveal type="match" state=<<__state__>> text="yes" default=<<__def__>>>
+<$button set=<<__state__>> setTo="no" class="tc-btn-invisible">{{$:/core/images/down-arrow}}</$button>
+</$reveal>
+\end

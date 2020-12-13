@@ -1,0 +1,8 @@
+title: $:/plugins/othy/iron-wiki/left-panel/character-bonds
+tags: $:/tags/othy/iron-wiki/left-panel
+caption: Bonds
+state: $:/state/othy/iron-wiki/character-bonds
+defstate: no
+list-after: $:/plugins/othy/iron-wiki/left-panel/character-info
+
+TODO : bonds

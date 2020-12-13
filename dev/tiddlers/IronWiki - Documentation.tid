@@ -1,17 +1,8 @@
 created: 20201210210246447
-modified: 20201213014546486
+modified: 20201213153936052
 tags: 
 title: IronWiki - Documentation
 type: text/vnd.tiddlywiki
-
-\define doc-paragraph(state)
-<$reveal type="match" state=<<__state__>> text="no" default="no">
-<$button set=<<__state__>> setTo="yes" class="tc-btn-invisible">{{$:/core/images/right-arrow}}</$button>
-</$reveal>
-<$reveal type="match" state=<<__state__>> text="yes" default="no">
-<$button set=<<__state__>> setTo="no" class="tc-btn-invisible">{{$:/core/images/down-arrow}}</$button>
-</$reveal>
-\end
 
 \define show-btn(button)
 <span style="font-size: 28px">
@@ -31,9 +22,11 @@ So the main goal behind v1 is to be as close as [[IronWriter|https://alexlarioza
 
 ! Usage
 
+<$importvariables filter="[[$:/plugins/othy/iron-wiki/helpers/arrow-button]]">
+
 (Use arrows to reveal documentation)
 
-!! <<doc-paragraph "$:/state/doc-switch-interface">> Switching between interface
+!! <<arrow-button "$:/state/doc-switch-interface">> Switching between interface
 
 <$reveal type="match" state="$:/state/doc-switch-interface" text="yes" default="no">
 The ~IronWiki plugin add a special button in the toolbar:
@@ -43,13 +36,15 @@ And to come back to classic ~TiddlyWiki interface, this one:
 <<show-btn "$:/plugins/othy/iron-wiki/buttons/switch-back">>
 </$reveal>
 
-!! <<doc-paragraph "$:/state/doc-change-title">> Change the title
+!! <<arrow-button "$:/state/doc-change-title">> Change the title
 
 <$reveal type="match" state="$:/state/doc-change-title" text="yes" default="no">
 The title is easily editable by clicking on the button <<show-btn "$:/plugins/othy/iron-wiki/buttons/edit-title">> at the right of the title. Why this functionality? Do you know of to change the title of a ~TiddlyWiki?
 </$reveal>
 
 (More to come)
+
+</$importvariables>
 
 ! Download & use it
 

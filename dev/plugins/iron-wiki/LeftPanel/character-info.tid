@@ -1,0 +1,9 @@
+title: $:/plugins/othy/iron-wiki/left-panel/character-info
+tags: $:/tags/othy/iron-wiki/left-panel
+caption: Character info
+state: $:/state/othy/iron-wiki/character-info
+defstate: yes
+
+Character info
+
+ blabla 123
