@@ -1,5 +1,5 @@
 created: 20201210210246447
-modified: 20201213012807747
+modified: 20201213014546486
 tags: 
 title: IronWiki - Documentation
 type: text/vnd.tiddlywiki
@@ -53,10 +53,16 @@ The title is easily editable by clicking on the button <<show-btn "$:/plugins/ot
 
 ! Download & use it
 
-You want to use the ~IronWiki plugin, it's easy, you can download this file, manually or with this button <<show-btn "$:/core/ui/Buttons/save-wiki">>, or you can drag'n'drop the box below on an empty ~TiddlyWiki file:
+You want to use the ~IronWiki plugin, it's easy, you can download this file, manually or with this button <<show-btn "$:/core/ui/Buttons/save-wiki">>.
+
+You can also install the plugin separately, by drag'n'drop the box below on an empty ~TiddlyWiki, but in this case you need to install [[TW5FontAwesome  plugin|http://thediveo.github.io/TW5FontAwesome/]] (the first box).
 
 <div style="margin-right:70px;margin-left:70px;">
+
+{{$:/plugins/TheDiveO/FontAwesome||$:/core/ui/Components/plugin-info}}
+
 {{$:/plugins/othy/iron-wiki||$:/core/ui/Components/plugin-info}}
+
 </div>
 
 Easy, right?
